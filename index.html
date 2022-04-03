@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>诸暨市政务服务办公室</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+    <div class="body">
+        <h1>诸暨市政务服务办公室</h1>
+        <div class="content">
+            <div class="content-top">
+                <div class="module cen1">
+                    <h3>今年累计办件数量</h3>
+                    <div>
+                        <div id="quantity" style="width: 100%;height:100%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="module cen2">
+                        <h3>大厅今日概况</h3>
+                        <div>
+                            <ul class="title" id="survey">
+                                <li>
+                                    <p>取号人数</p>
+                                    <p><span>123</span>人次</p>
+                                </li>
+                                <li>
+                                    <p>办理人数</p>
+                                    <p><span>123</span>人次</p>
+                                </li>
+                                <li>
+                                    <p>等待人数</p>
+                                    <p><span>123</span>人次</p>
+                                </li>
+                                <li>
+                                    <p>平均等候时长</p>
+                                    <p><span>12</span>分钟</p>
+                                </li>
+                                <li>
+                                    <p>平均办理时长</p>
+                                    <p><span>12</span>分钟</p>
+                                </li>
+                            </ul>
+                            <div>
+                                <div>
+                                    <div style="background-image: url(../img/cen2-1.png);">100%</div>
+                                    <!-- <img src="img/cen2-1.png" alt=""> -->
+                                    <p>满意率</p>
+                                </div>
+                                <div>
+                                    <div style="background-image: url(../img/cen2-2.png);">90%</div>
+                                    <!-- <img src="img/cen2-2.png" alt=""> -->
+                                    <p>最多跑一次实现率</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module cen3">
+                        <h3>办件播报</h3>
+                        <div>
+                            <marquee id="marquee">
+                                <p>本日办件 <span>337</span> 件，满意度 <span>99%</span>；本周办件 <span>1567</span> 件，满意度
+                                    <span>99%</span>；本月办件 <span>4582</span> 件，满意度 <span>99%</span>。</p>
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="module cen4">
+                    <h3>窗口繁忙情况</h3>
+                    <ul>
+                        <li><span style="background: #F37171;"></span><span>繁忙</span></li>
+                        <li><span style="background: #FF9745;"></span><span>较忙</span></li>
+                        <li><span style="background: #34AAFF;"></span><span>一般</span></li>
+                    </ul>
+                    <div>
+                            <div class="table">
+                                <p>
+                                    <span>业务名称</span>
+                                    <span>等候人数</span>
+                                    <span>平均等候时长</span>
+                                    <span>平均办理时长</span></p>
+                                <ul id="table">
+
+                                </ul>
+                            </div>
+                            <p>温馨提示：当前办理 <span id="business">社保医保</span> 业务的人数较多，请您耐心等待</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="content-bottom">
+                <div class="module cen5">
+                    <h3>便民举措：中午无休、周末无休</h3>
+                    <div>
+                        <img src="img/cen5.png" alt="">
+                        <p>温馨提示：以上重要涉民事项，您可以选择中午或周末前来办理</p>
+                    </div>
+                </div>
+
+                <div class="module cen6">
+                    <h3>最新办件情况</h3>
+                    <div>
+                        <ul id="newdata">
+                            <li>
+                                <p>取号</p>
+                                <p>业务名称</p>
+                                <p>满意度</p>
+                            </li>
+                            <!-- <li class="li">
+                                <p>E0212</p>
+                                <p>社保综合</p>
+                                <p>非常满意</p>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="module cen7">
+                    <h3>各时段忙闲预测</h3>
+                    <div>
+                        <div id="hall" style="width: 100%;height:600px"></div>
+                        <p>温馨提示：请合理安排时间，错峰办事</p>
+                        <!-- <div id="quantity" style="width: 100%;height:100%"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    function AutoSize() {
+        var body = document.getElementsByTagName('body')[0];
+        let standardWidth = 3890;
+        let standardHeight = 2400;
+        let clientWidth = document.documentElement.clientWidth;
+        let clientHeight = document.documentElement.clientHeight;
+        let width = clientWidth / standardWidth;
+        let height = clientHeight / standardHeight;
+        body.style.transform = "scale(" + width + "," + height + ")"
+    }
+    AutoSize()
+
+    window.onresize = function () {
+        AutoSize()
+    }
+</script>
+
+</html>
